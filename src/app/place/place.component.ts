@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-place',
@@ -9,14 +8,13 @@ import { Router } from '@angular/router';
 })
 export class PlaceComponent implements OnInit {
   places;
-
-  constructor(private apiService : ApiService, private router : Router) { }
+  
+  constructor(private apiService : ApiService) { }
 
   ngOnInit() {
     this.apiService.placeListAll().subscribe((data)=>{
       console.log(data);
-      //this.router.navigateByUrl('place');
-      this.places = data['places'];
+      this.places = data;
     });
   }
 
