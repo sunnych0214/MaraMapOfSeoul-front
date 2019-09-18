@@ -9,7 +9,7 @@ export class ApiService {
   constructor(private httpClient : HttpClient) { }
 
   public placeListAll(){
-    return this.httpClient.post(`http://localhost:8080/place/placeListAll`,"");
+    return this.httpClient.post(`/api/place/placeListAll`,"");
   }  
 }
 

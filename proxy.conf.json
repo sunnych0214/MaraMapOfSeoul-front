@@ -1,0 +1,11 @@
+{  
+    "/api": {  
+       "target": "http://3.15.254.6:8080/maramapofseoul",  
+       "secure": false,  
+       "logLevel": "debug",
+       "pathRewrite": {
+        "^/api": ""
+      },
+      "changeOrigin": true
+    }  
+ }  
