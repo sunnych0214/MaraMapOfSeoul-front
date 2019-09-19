@@ -43,6 +43,25 @@ export class ApiService {
 
 
   /* REVIEW */
+  public maraByPlace(){
+    return this.httpClient.post(`api/review/maraByPlace`,"");
+  }
+  
+  public registerReview(){
+    return this.httpClient.post(`api/review/registerReview`,"");
+  }
+
+  public reviewByPlace(){
+    return this.httpClient.post(`api/review/reviewByPlace`,"");
+  }
+
+  public starByPlace(){
+    return this.httpClient.post(`api/review/starByPlace`,"");
+  }
+
+  public MaraByPlace(){
+    return this.httpClient.post(`api/review/starMaraByPlacestar`,"");
+  }
 
 }
 
