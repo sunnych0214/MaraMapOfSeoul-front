@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewModule } from './view/view.module';
 
+import { AppComponent } from './app.component';
 import { PlaceComponent } from './place/place.component';
 import { MapComponent } from './map/map.component';
 
@@ -15,18 +15,13 @@ import { ApiService } from './api.service';
 @NgModule({
   declarations: [
     AppComponent,
-    PlaceComponent,
-    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: 'place', component: PlaceComponent},
-      { path: 'map', component: MapComponent},
-
-    ])
+    CommonModule,
+    ViewModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
