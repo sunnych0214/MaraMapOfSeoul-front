@@ -1,6 +1,8 @@
-# Apiconnect
+# MaraMapOfSeoul-front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+한국의 모든 마라탕을 먹고 싶은데, 마라탕 집만 모아볼 수 있었으면 좋겠다<br>
+이왕이면 마라맛이 강한지, 위생은 괜찮은지 확인할 수 있으면 더 좋겠고<br>
+이런 생각에서 출발한 서울의 마라전문점을 모아보는 사이트 MaraMapOfSeoul의 프론트 Angular.js 프로젝트 입니다
 
 ## Development server
 
