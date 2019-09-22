@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 
 import { PlaceComponent } from '../place/place.component';
 import { MapComponent } from '../map/map.component';
-import { AppComponent } from '../app.component';
 import { ViewComponent } from './view.component';
+import { PlaceviewComponent } from '../place/placeview/placeview.component';
 
 export const ROUTES:Routes = 
 [ 
@@ -14,7 +14,11 @@ export const ROUTES:Routes =
     component: ViewComponent,
     children: 
     [ 
-      { path: 'place', component: PlaceComponent }, 
+      { 
+        path: 'place', 
+        component: PlaceComponent,
+        children:
+        [{ path: '', component: PlaceviewComponent}] }, 
       { path: 'map', component: MapComponent}
     ]
   }
@@ -24,7 +28,8 @@ export const ROUTES:Routes =
   declarations: [
     PlaceComponent,
     MapComponent,
-    ViewComponent
+    ViewComponent,
+    PlaceviewComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),

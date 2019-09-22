@@ -6,8 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ViewModule } from './view/view.module';
 
 import { AppComponent } from './app.component';
-import { PlaceComponent } from './place/place.component';
-import { MapComponent } from './map/map.component';
 
 import { ApiService } from './api.service';
 

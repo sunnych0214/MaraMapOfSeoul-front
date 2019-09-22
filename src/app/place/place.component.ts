@@ -12,10 +12,11 @@ export class PlaceComponent implements OnInit {
   constructor(private apiService : ApiService) { }
 
   ngOnInit() {
-    this.apiService.placeListAll().subscribe((data)=>{
-      console.log(data);
-      this.places = data;
-    });
+    
+  }
+
+  public open(event, item) {
+    alert('Open ' + item);
   }
 
 }
