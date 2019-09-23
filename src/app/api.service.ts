@@ -14,53 +14,53 @@ export class ApiService {
   }
   
   public placeListByReviewUp(){
-    return this.httpClient.post(`api/place/placeListByReviewUp`,"");
+    return this.httpClient.post(`/api/place/placeListByReviewUp`,"");
   }
 
   public placeListByReviewDown(){
-    return this.httpClient.post(`api/place/placeListByReviewDown`,"");
+    return this.httpClient.post(`/api/place/placeListByReviewDown`,"");
   }
 
   public placeListByStarDown(){
-    return this.httpClient.post(`api//place/placeListByStarDown`,"");
+    return this.httpClient.post(`/api/place/placeListByStarDown`,"");
   }
 
   public placeListByStarUp(){
-    return this.httpClient.post(`api/place/placeListByStarUp`,"");
+    return this.httpClient.post(`/api/place/placeListByStarUp`,"");
   }
 
   public placeListByViewDown(){
-    return this.httpClient.post(`api/place/placeListByViewDown`,"");
+    return this.httpClient.post(`/api/place/placeListByViewDown`,"");
   }
 
   public placeListByViewUp(){
-    return this.httpClient.post(`api/place/placeListByViewUp`,"");
+    return this.httpClient.post(`/api/place/placeListByViewUp`,"");
   }
 
   public registerPlace(){
-    return this.httpClient.post(`api/place/registerPlace`,"");
+    return this.httpClient.post(`/api/place/registerPlace`,"");
   }
 
 
   /* REVIEW */
   public maraByPlace(){
-    return this.httpClient.post(`api/review/maraByPlace`,"");
+    return this.httpClient.post(`/api/review/maraByPlace`,"");
   }
   
   public registerReview(){
-    return this.httpClient.post(`api/review/registerReview`,"");
+    return this.httpClient.post(`/api/review/registerReview`,"");
   }
 
   public reviewByPlace(){
-    return this.httpClient.post(`api/review/reviewByPlace`,"");
+    return this.httpClient.post(`/api/review/reviewByPlace`,"");
   }
 
   public starByPlace(){
-    return this.httpClient.post(`api/review/starByPlace`,"");
+    return this.httpClient.post(`/api/review/starByPlace`,"");
   }
 
   public MaraByPlace(){
-    return this.httpClient.post(`api/review/starMaraByPlacestar`,"");
+    return this.httpClient.post(`/api/review/starMaraByPlacestar`,"");
   }
 
 }

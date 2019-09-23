@@ -2,9 +2,12 @@
 <input type="text" id="searchBox">
 
 <!-- 검색 옵션 -->
-<input type="button" id="orderByStar" value="별점순"><!-- (click)="open($event, item)"-->
-<input type="button" id="orderByReview" value="리뷰개수순">
-<input type="button" id="orderByView" value="조회순">
+<input type="button" id="orderByStar" value="별점순" (click)="orderByStar()">
+<!-- <input type="hidden" id="starStatus" value="" -->
+
+<input type="button" id="orderByReview" value="리뷰개수순" (click)="orderByReview()">
+
+<input type="button" id="orderByView" value="조회순" (click)="orderByView()">
 
 <app-placeview></app-placeview>
 

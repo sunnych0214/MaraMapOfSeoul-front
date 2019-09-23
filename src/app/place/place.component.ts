@@ -15,8 +15,18 @@ export class PlaceComponent implements OnInit {
     
   }
 
-  public open(event, item) {
-    alert('Open ' + item);
+  public orderByStar() {
+    console.log("click is working");
+    alert('Open');
   }
 
+  public orderByReview() {
+    console.log("click is working");
+    alert('Open');
+  }
+
+  public orderByView() {
+    console.log("click is working");
+    alert('Open');
+  }
 }
