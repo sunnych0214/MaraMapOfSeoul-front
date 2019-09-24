@@ -8,12 +8,22 @@ import { ApiService } from '../api.service';
 })
 export class PlaceComponent implements OnInit {
   places;
-  
+  searchText;
+
   constructor(private apiService : ApiService) { }
 
   ngOnInit() {
-    
+     this.apiService.placeListAll().subscribe((data)=>{
+      console.log(data);
+      this.places = data;
+    });
   }
+
+  // public search(){
+  //   searchKeyWord : String = document.getElementById("searchBox").
+  //   return searchKeyWord;
+  // }
+
 
   public orderByStar() {
     console.log("click is working");

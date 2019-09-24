@@ -4,7 +4,8 @@ import { ApiService } from '../../api.service';
 @Component({
   selector: 'app-placeview',
   templateUrl: './placeview.component.html',
-  styleUrls: ['./placeview.component.scss']
+  styleUrls: ['./placeview.component.scss'],
+  inputs: ['searchKeyWord']
 })
 export class PlaceviewComponent implements OnInit {
   
@@ -19,6 +20,8 @@ export class PlaceviewComponent implements OnInit {
       this.places = data;
     });
   }
+
+  /* 검색 쿼리 */
 
   /* 검색 옵션 - 별점순 */
   public orderByStar(star : Option){
