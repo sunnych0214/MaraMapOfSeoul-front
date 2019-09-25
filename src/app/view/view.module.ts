@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { PlaceComponent } from '../place/place.component';
 import { MapComponent } from '../map/map.component';
@@ -38,7 +39,8 @@ export const ROUTES:Routes =
     RouterModule.forRoot(ROUTES),
     CommonModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule
   ]
 })
 
