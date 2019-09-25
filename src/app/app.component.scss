@@ -3,3 +3,11 @@
 html {
     font-family: 'Noto Sans KR', sans-serif;
 };
+
+#placeInsertButton{
+    background: url('../assets/images/plus.png') no-repeat;
+    border: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
