@@ -1,13 +1,25 @@
 <html>
-<div>인기 마라탕 표시 공간</div>
-<div *ngFor="let place of placesByStar">
-  <span>{{place.name}}</span>
-</div>
-
-<div><a routerLink="map">지도 보기</a></div>
-<div><a routerLink="place">리스트 보기</a></div>
-<input type="button" id="placeInsertButton">
-
-<router-outlet></router-outlet>
+<section class="best_place">
+  <div class="best_place_wrap">
+    <span class="title">BEST</span>
+    <ul class="list_wrap">
+      <li class="list" *ngFor="let place of placesByStar">
+        <span>{{place.name}}</span>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="test">
+  <div class="select_wrap">
+    <ul>
+      <li><a routerLink="map">지도 보기</a></li>
+      <li><a routerLink="place">리스트 보기</a></li>
+    </ul>
+  </div>
+  <div class="result_wrap">
+    <input type="button" id="placeInsertButton">
+    <router-outlet></router-outlet>
+  </div>
+</section>
 
 </html>

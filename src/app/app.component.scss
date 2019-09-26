@@ -11,3 +11,44 @@ html {
     height: 32px;
     cursor: pointer;
 }
+section{
+    width: 80%;
+    margin: 0 auto;
+}
+.best_place_wrap{
+    width: 100%;
+    height: 200px;
+}
+
+
+.best_place_wrap .title{
+    display: block;
+    float: left;
+    margin: 20px 30px;
+}
+.best_place_wrap .list_wrap{
+}
+
+
+.best_place_wrap .list_wrap .list {
+    float: left;
+    margin: 20px;
+    display: block;
+}
+
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.select_wrap{
+    
+}
+.select_wrap li{
+    float: left;
+    width: calc(100%/2);
+}
+.result_wrap{
+    
+}
