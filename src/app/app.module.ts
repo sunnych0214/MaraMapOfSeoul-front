@@ -11,11 +11,13 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 
 import { ApiService } from './api.service';
+import { InsertPlaceComponent } from './insert-place/insert-place.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    InsertPlaceComponent,
   ],
   imports: [
     BrowserModule,
