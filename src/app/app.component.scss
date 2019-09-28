@@ -11,3 +11,63 @@ html {
     height: 32px;
     cursor: pointer;
 }
+section{
+    width: 80%;
+    margin: 0 auto !important;
+}
+.best_place_wrap{
+    width: 100%;
+    height: 200px;
+}
+
+
+.best_place_wrap .title{
+    display: block;
+    float: left;
+    margin: 20px 30px;
+}
+.best_place_wrap .list_wrap{
+}
+
+
+.best_place_wrap .list_wrap .list {
+    float: left;
+    margin: 20px;
+    display: block;
+}
+
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.select_wrap{
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+.select_wrap ul{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.select_wrap li{
+    float: left;
+    height: 100%;
+    width: calc(100%/2);
+    text-align: center;
+    background-color: mistyrose;
+}
+.select_wrap li span{
+    line-height: 40px;
+    overflow: hidden;
+}
+.select_wrap li.selected{
+    background-color: darksalmon !important;
+}
+.result_wrap{
+    border: gray solid 2px;
+    border-top: 0px;
+    padding: 30px;
+}
