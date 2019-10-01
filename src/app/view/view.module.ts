@@ -9,6 +9,7 @@ import { PlaceComponent } from '../place/place.component';
 import { MapComponent } from '../map/map.component';
 import { ViewComponent } from './view.component';
 import { PlaceviewComponent } from '../place/placeview/placeview.component';
+import { InsertPlaceComponent } from '../insert-place/insert-place.component';
 
 
 export const ROUTES:Routes = 
@@ -23,7 +24,8 @@ export const ROUTES:Routes =
         component: PlaceComponent,
         children:
         [{ path: '', component: PlaceviewComponent}] }, 
-      { path: 'map', component: MapComponent}
+      { path: 'map', component: MapComponent},
+      { path: 'insertPlace', component : InsertPlaceComponent}
     ]
   }
 ]
