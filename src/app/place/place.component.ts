@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-place',
@@ -10,10 +11,12 @@ export class PlaceComponent implements OnInit {
   places;
   searchText;
 
-  constructor(private apiService : ApiService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-     this.apiService.placeListAll().subscribe((data)=>{
+    document.getElementById('place_wrap').classList.add('selected');
+    document.getElementById('map_wrap').classList.remove('selected');
+    this.apiService.placeListAll().subscribe((data) => {
       console.log(data);
       this.places = data;
     });
