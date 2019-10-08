@@ -20,7 +20,7 @@ export class PlaceComponent implements OnInit {
       console.log(data);
       this.places = data;
     });
-  }
+  } 
 
   // public search(){
   //   searchKeyWord : String = document.getElementById("searchBox").
