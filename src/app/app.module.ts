@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ViewModule } from './view/view.module';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import { FormsModule } from '@angular/forms';
-import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 
@@ -26,10 +25,7 @@ import { InsertPlaceComponent } from './insert-place/insert-place.component';
     CommonModule,
     ViewModule,
     Ng2SearchPipeModule,
-    FormsModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCWpxExtG1PDmASr0pj4HlbTK2G6W10LFQ'
-    })
+    FormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
+declare let Kakao:any;			// ← 추가
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  title = 'My first AGM project'; 
-  lat = 51.678418;
-  lng = 7.809007;
+  
   constructor(private apiService : ApiService) { }
 
   ngOnInit() {
-    document.getElementById('map_wrap').classList.add('selected');
-    document.getElementById('place_wrap').classList.remove('selected');
+    var container = document.getElementById('map');
+		var options = {
+			center: new Kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new Kakao.maps.Map(container, options);
   }
 }

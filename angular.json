@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "http://dapi.kakao.com/v2/maps/sdk.js?appkey=4b45e3173667c38ed6faf9ab32d59400"
+            ]
           },
           "configurations": {
             "production": {
