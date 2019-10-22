@@ -1,3 +1,50 @@
 agm-map {
     height: 300px;
   }
+
+  .subway {
+    width: 1500px;
+    height: 510px;
+  }
+  .subway__line:nth-child(1) {
+    color: #5bba47;
+  }
+  .subway__line polyline {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 5px;
+  }
+  .subway__transfers polyline {
+    fill: none;
+    stroke: #fff;
+  }
+  .subway__station {
+    cursor: pointer;
+  }
+  .subway__station text {
+    color: #000;
+    font-size: 11px;
+    font-family: 'OpenSans';
+    font-weight: normal;
+    opacity: 0.8;
+  }
+  .subway__station circle {
+    fill: #fff;
+    stroke: currentColor;
+    stroke-width: 2px;
+    r: 5px;
+  }
+  .subway__station:hover text,
+  .subway__station.is-hover text {
+    opacity: 1;
+  }
+  .subway__station.is-selected text {
+    opacity: 1;
+  }
+  .subway__station.is-selected circle {
+    fill: currentColor;
+  }
+  polyline.is-selected {
+    opacity: 0;
+  }
+  

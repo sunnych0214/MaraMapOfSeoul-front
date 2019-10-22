@@ -1,4 +1,217 @@
 <p>map works!</p>
-<agm-map [latitude]="lat" [longitude]="lng">
+<!-- <agm-map [latitude]="lat" [longitude]="lng">
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
+  </agm-map> -->
+
+  <svg class="subway" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 620 510">
+
+    <g class="subway__line">
+      <polyline points="125,150 925,150 925,300 900,325 100,325 100,300 100,175 125,150"/>
+      <polyline points="100,300 100,350 125,375 300,375"/>
+      <polyline points="925,150, 925,100 900,75 650,75"/>
+      <g class="subway__station">
+        <circle cx="300" cy="375"/>
+        <text x="313" y="378">까치산</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="250" cy="375"/>
+        <text x="225" y="360">신정네거리</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="200" cy="375"/>
+        <text x="175" y="400">양천구청</text>
+      </g>
+      <g class="subway__station" data-transfer-id="6">
+        <circle cx="150" cy="375"/>
+        <text x="125" y="360">도림천</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="100" cy="325"/>
+        <text x="50" y="330">신도림</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="100" cy="275"/>
+        <text x="339" y="266">문래</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="100" cy="225"/>
+        <text x="339" y="266">영등포구청</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="100" cy="175"/>
+        <text x="339" y="266">당산</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="125" cy="150"/>
+        <text x="339" y="266">합정</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="175" cy="150"/>
+        <text x="339" y="266">홍대입구</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="225" cy="150"/>
+        <text x="339" y="266">신촌</text>
+      </g>
+
+
+      <g class="subway__station">
+        <circle cx="275" cy="150"/>
+        <text x="339" y="266">이대</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="325" cy="150"/>
+        <text x="339" y="266">아현</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="375" cy="150"/>
+        <text x="339" y="266">충정로</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="425" cy="150"/>
+        <text x="339" y="266">150시창</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="475" cy="150"/>
+        <text x="339" y="266">을지로입구</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="525" cy="150"/>
+        <text x="339" y="266">을지로3가</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="575" cy="150"/>
+        <text x="339" y="266">을지로4가</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="625" cy="150"/>
+        <text x="339" y="266">동대문종합운동장</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="675" cy="150"/>
+        <text x="339" y="266">신당</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="725" cy="150"/>
+        <text x="339" y="266">상왕십리</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="775" cy="150"/>
+        <text x="339" y="266">왕십리</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="825" cy="150"/>
+        <text x="339" y="266">한양대</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="875" cy="150"/>
+        <text x="339" y="266">뚝섬</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="925" cy="150"/>
+        <text x="339" y="266">성수</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="925" cy="200"/>
+        <text x="339" y="266">건대입구</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="925" cy="250"/>
+        <text x="339" y="266">구의</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="925" cy="300"/>
+        <text x="339" y="266">강변</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="900" cy="325"/>
+        <text x="339" y="266">잠실나루</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="840" cy="325"/>
+        <text x="339" y="266">잠실</text>
+      </g>
+
+      <g class="subway__station">
+        <circle cx="800" cy="325"/>
+        <text x="339" y="266">잠실새내</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="760" cy="325"/>
+        <text x="339" y="266">종합운동장</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="720" cy="325"/>
+        <text x="339" y="266">삼성</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="680" cy="325"/>
+        <text x="339" y="266">선을</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="640" cy="325"/>
+        <text x="339" y="266">역삼</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="600" cy="325"/>
+        <text x="339" y="266">강남</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="560" cy="325"/>
+        <text x="339" y="266">교대</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="520" cy="325"/>
+        <text x="339" y="266">서초</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="480" cy="325"/>
+        <text x="339" y="266">방배</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="440" cy="325"/>
+        <text x="339" y="266">사당</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="400" cy="325"/>
+        <text x="339" y="266">낙성대</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="360" cy="325"/>
+        <text x="339" y="266">서울대입구</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="320" cy="325"/>
+        <text x="339" y="266">봉천</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="280" cy="325"/>
+        <text x="339" y="266">신림</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="240" cy="325"/>
+        <text x="339" y="266">신대방</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="200" cy="325"/>
+        <text x="339" y="266">구로디지털단지</text>
+      </g>
+      <g class="subway__station">
+        <circle cx="160" cy="325"/>
+        <text x="339" y="266">대림</text>
+      </g>
+
+    </g>
+    </svg>
+    
