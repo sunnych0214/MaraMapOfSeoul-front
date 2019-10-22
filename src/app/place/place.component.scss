@@ -1,0 +1,26 @@
+* {
+    text-align: center;
+
+    margin: 0 auto;
+}
+
+.sortButton {
+    display: block;
+    float: right;
+    margin: 0 auto;
+}
+
+input[type=button] {
+    border: 1px solid black;
+    margin: 10px;
+    padding : .7em;
+    letter-spacing: 1pt;
+}
+
+input[type=text] {
+    width : 70%;
+    height: auto; /* 높이 초기화 */ 
+    line-height: normal; /* line-height 초기화 */ 
+    padding: .7em .4em; /* 여백 설정 */
+    margin: 10px;
+}

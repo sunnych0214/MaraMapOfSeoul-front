@@ -109,15 +109,49 @@ header div.logo_wrap .logo_img{
     float: left;
 }
 
-
 header div.logo_wrap .logo_span{
     display: block;
     font-size: 60px;
     line-height: 127px;
     float: left;
     font-family: 'Do Hyeon', sans-serif;
+    margin-left: 35px;
 }
 hr.header_split{
     width: 95%;
     margin-bottom: 30px;
+}
+
+.nearby_place_wrap {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.nearby_place_wrap .title {
+    display: block;
+    margin: 17px 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nearby_place_wrap .list_wrap {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.nearby_place_wrap .list_wrap .list {
+    float: left;
+    padding: 20px;
+    margin: 0 10px;
+    display: block;
+    line-height: 35px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.nearby_place_wrap .list_wrap .list:hover{
+    background-color: ghostwhite;
 }

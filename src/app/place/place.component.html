@@ -1,6 +1,7 @@
 <!-- 검색 상자 -->
 <input class="form-control" type="text" id="searchBox" [(ngModel)]="searchText">
 
+<div class="sortButton">
 <!-- 검색 옵션 -->
 <input type="button" id="orderByStar" value="별점순" (click)="orderByStar()">
 <!-- <input type="hidden" id="starStatus" value="" -->
@@ -8,6 +9,7 @@
 <input type="button" id="orderByReview" value="리뷰개수순" (click)="orderByReview()">
 
 <input type="button" id="orderByView" value="조회순" (click)="orderByView()">
+</div>
 
 <div class="placeList" *ngFor="let place of places | filter:searchText">
     <div class="placeElement">{{place.name}}</div>
