@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from '../api.service'
+// import { daum } from '../'
 
 @Component({
   selector: 'app-insert-place',
@@ -28,11 +29,11 @@ export class InsertPlaceComponent implements OnInit {
 
   createForm() {
     this.insertPlaceForm = this.formBuilder.group({
-      placeName: ["lalala"],
+      name: ["lalala"],
       lat: [50.00],
       lng: [60.00],
-      openTime: [''],
-      closeTime: [''],
+      open_time: [''],
+      close_time: [''],
       tel: [''],
       menu: [''],
       detail: ['']
@@ -43,11 +44,20 @@ export class InsertPlaceComponent implements OnInit {
 
   onSubmit(insertPlaceForm : any){
     console.log(insertPlaceForm);
-
-    let body = {name:'lalala',lat:30.5,lng:40.5}
-    let result = this.apiservice.registerPlace(body);
-    console.log(result);
+    let result = this.apiservice.registerPlace(insertPlaceForm);
   }
+
+  
+  // findPostCodePopUp(){
+  //   daum.postcode.load(function(){
+  //         new daum.Postcode({
+  //             oncomplete: function(data) {
+  //                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+  //                 // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+  //             }
+  //         }).open();
+  //     });
+  // }
 
   ngOnInit() {
   }
