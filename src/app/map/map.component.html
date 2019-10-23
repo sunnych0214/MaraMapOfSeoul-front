@@ -215,3 +215,11 @@
     </g>
     </svg>
     
+    <div class="nearby_place_wrap">
+      <span class="title">역 주변 맛집</span>
+      <ul class="list_wrap">
+        <li class="list" *ngFor="let place of placesByStar">
+          <span>{{place.name}}</span>
+        </li>
+      </ul>
+    </div>
