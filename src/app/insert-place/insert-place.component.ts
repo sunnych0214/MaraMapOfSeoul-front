@@ -44,7 +44,8 @@ export class InsertPlaceComponent implements OnInit {
   onSubmit(insertPlaceForm : any){
     console.log(insertPlaceForm);
 
-    let result = this.apiservice.registerPlace(insertPlaceForm);
+    let body = {name:'lalala',lat:30.5,lng:40.5}
+    let result = this.apiservice.registerPlace(body);
     console.log(result);
   }
 
