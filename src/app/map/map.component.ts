@@ -7,9 +7,14 @@ import { ApiService } from '../api.service';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
+  placesByStar;
   
   constructor(private apiService : ApiService) { }
 
   ngOnInit() {
+    this.apiService.placeListByStarDown().subscribe((data)=>{
+      console.log(data);
+      this.placesByStar = data;
+    });
   }
 }
