@@ -13,12 +13,15 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     
+    document.getElementById('place_wrap').classList.remove('selected');
+    document.getElementById('map_wrap').classList.add('selected');
+    
     this.apiService.placeListByStarDown().subscribe((data)=>{
       console.log(data);
       this.placesByStar = data;
     });
 
-    $(document).on('click','.subway__station', function(){
+    $(".subway__line").on('click','.subway__station', function(){
       var station = $(this);
       var transferId = station.attr('data-transfer-id');
       var svg = station.closest('svg');
