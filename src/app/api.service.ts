@@ -37,8 +37,11 @@ export class ApiService {
     return this.httpClient.post(`/api/place/placeListByViewUp`,"");
   }
 
-  public registerPlace(){
-    return this.httpClient.post(`/api/place/registerPlace`,"");
+  public registerPlace(place: any){
+    return this.httpClient.post(`/api/place/registerPlace`,place).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err)
+    );
   }
 
 

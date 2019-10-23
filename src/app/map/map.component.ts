@@ -7,10 +7,17 @@ import { ApiService } from '../api.service';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
+  placesByStar;
   
   constructor(private apiService : ApiService) { }
 
   ngOnInit() {
+    
+    this.apiService.placeListByStarDown().subscribe((data)=>{
+      console.log(data);
+      this.placesByStar = data;
+    });
+
     $(document).on('click','.subway__station', function(){
       var station = $(this);
       var transferId = station.attr('data-transfer-id');
@@ -25,6 +32,7 @@ export class MapComponent implements OnInit {
         elements.attr('class','subway__station');
       else
         elements.attr('class','subway__station is-selected');
+
     });
   }
 }
