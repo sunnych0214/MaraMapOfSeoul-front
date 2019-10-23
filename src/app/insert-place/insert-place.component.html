@@ -1,32 +1,20 @@
 <h2>장소 입력하기</h2>
 <form insertPlaceForm="ngform" id="insertPlaceForm"  name="insertPlaceForm"
-[formGroup]="insertPlaceForm" (ngSubmit)="onSubmit(insertPlaceForm.value)">
+    [formGroup]="insertPlaceForm" (ngSubmit)="onSubmit(insertPlaceForm.value)">
+
     <label for="placeName">이름 : 
-        <input type="text" id="placeName" name="placeName"
-        formControlName="placeName" #placeName></label><br>
+        <input type="text" id="placeName" name="placeName" formControlName="placeName" #placeName></label><br>
     <label>위치 : 여기에 위치 찾기 넣기</label><br>
-    <label>영업시간 : <input type="time"> - <input type="time"></label><br>
-    <label>전화번호 : <input type="tel"></label><br>
-    <label>메뉴 사진 : <input type="file"></label><br>
-    <label>특징 : <textarea></textarea></label><br>
+    <label>영업시간 : 
+        <input type="time" formControlName="openTime" #openTime>
+         - <input type="time" formControlName="closeTime" #closeTime></label><br>
+    <label>전화번호 : 
+        <input type="tel" formControlName="tel" #tel></label><br>
+    <label>메뉴 사진 : 
+        <input type="file" formControlName="menu" #menu></label><br>
+    <label>특징 : 
+        <textarea formControlName="detail" #detail></textarea></label><br>
 
 
-    <input type="submit" value="전송" (click) = "onSubmit(placeName.value)">
+    <input type="submit" value="전송">
 </form>
-
-
-<!--
-id
-seq
-name
-lat
-lng
-open_time
-close_time
-tel
-menu
-detail
-view_count
-
-
--->
