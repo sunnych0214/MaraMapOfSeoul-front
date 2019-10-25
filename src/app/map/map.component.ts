@@ -23,18 +23,15 @@ export class MapComponent implements OnInit {
 
     $(".subway__line").on('click','.subway__station', function(){
       var station = $(this);
-      var transferId = station.attr('data-transfer-id');
       var svg = station.closest('svg');
       var isSelected = station.attr('class').indexOf("is-selected") > -1;
-      var elements;
-      if(transferId)
-        elements = $(this).add(svg.find('[data-transfer-id="'+transferId+'"]'));
-      else
-        elements = station;
+      var elements = station;
       if(isSelected)
         elements.attr('class','subway__station');
-      else
+      else{
+        alert(station.attr('id'));
         elements.attr('class','subway__station is-selected');
+      }
 
     });
   }
