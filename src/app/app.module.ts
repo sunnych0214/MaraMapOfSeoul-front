@@ -11,12 +11,14 @@ import { AppComponent } from './app.component';
 
 import { ApiService } from './api.service';
 import { InsertPlaceComponent } from './insert-place/insert-place.component';
+import { PlaceDetailComponent } from './place-detail/place-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InsertPlaceComponent,
+    PlaceDetailComponent,
   ],
   imports: [
     BrowserModule,
