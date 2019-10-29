@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'place', component: PlaceComponent},
   {path:'map', component: MapComponent},
   {path:'insertPlace', component:InsertPlaceComponent},
-  {path:'placeDetail', component:PlaceDetailComponent}
+  {path:'placeDetail/:place', component:PlaceDetailComponent}
 ];
 
 @NgModule({

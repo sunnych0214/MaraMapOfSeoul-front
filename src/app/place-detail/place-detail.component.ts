@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-place-detail',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaceDetailComponent implements OnInit {
 
-  constructor() { }
+  private place;
+
+  constructor(private route: ActivatedRoute) { 
+    //this.place = route.snapshot.params['place'];
+  }
 
   ngOnInit() {
-    
+      this.route.paramMap.subscribe(params => {
+      console.log('here');
+      });   
   }
 
 
