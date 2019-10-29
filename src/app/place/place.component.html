@@ -11,8 +11,12 @@
 <input type="button" id="orderByView" value="조회순" (click)="orderByView()">
 </div>
 
-<div class="placeList" *ngFor="let place of places | filter:searchText">
-    <div class="placeElement">{{place.name}}</div>
+<div class="placeList">
+    <ul class="placeList_wrap">
+      <li class="placeElement" *ngFor="let place of places | filter:searchText">
+        <span>{{place.name}}</span>
+      </li>
+    </ul>
 </div>
 <!--/{{place.star}}-->
 <!-- <app-placeview [searchKeyWord] = "search()"></app-placeview> -->

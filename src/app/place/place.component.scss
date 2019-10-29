@@ -24,3 +24,31 @@ input[type=text] {
     padding: .7em .4em; /* 여백 설정 */
     margin: 10px;
 }
+
+.placeList {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.placeList .placeList_wrap {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.placeList .placeList_wrap .placeElement {
+    width: 18%;
+    float: left;
+    padding: 20px;
+    margin: 0 10px 20px 10px;
+    display: block;
+    line-height: 35px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.placeList .placeList_wrap .placeElement:hover{
+    background-color: ghostwhite;
+}

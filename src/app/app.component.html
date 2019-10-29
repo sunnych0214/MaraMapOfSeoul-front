@@ -11,7 +11,7 @@
     <span class="title">BEST</span>
     <ul class="list_wrap">
       <li class="list" *ngFor="let place of placesByStar">
-        <span>{{place.name}}</span>
+        <span [routerLink]="['/placeDetail',place]">{{place.name}}</span>
       </li>
     </ul>
   </div>

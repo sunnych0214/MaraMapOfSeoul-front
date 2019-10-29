@@ -29,7 +29,7 @@ export class InsertPlaceComponent implements OnInit {
 
   createForm() {
     this.insertPlaceForm = this.formBuilder.group({
-      name: ["lalala"],
+      name: [""],
       lat: [50.00],
       lng: [60.00],
       open_time: [''],
