@@ -36,6 +36,11 @@ export class ApiService {
   public placeListByViewUp(){
     return this.httpClient.post(`/api/place/placeListByViewUp`,"");
   }
+  
+  public placeListByStation(station: string){
+    console.log("?");
+    return this.httpClient.post(`/api/place/placeListByStation`,station);
+  }
 
   public registerPlace(place: any){
     return this.httpClient.post(`/api/place/registerPlace`,place).subscribe(

@@ -9,7 +9,14 @@ import { ApiService } from '../api.service';
 export class MapComponent implements OnInit {
   placesByStar;
   
-  constructor(private apiService : ApiService) { }
+  constructor(private apiService : ApiService) { } 
+
+  public placeListByStation(stationName){
+    this.apiService.placeListByStation(stationName).subscribe((data)=>{
+      console.log(data);
+      this.placesByStar = data;
+    });
+  }
 
   ngOnInit() {
     
@@ -20,7 +27,8 @@ export class MapComponent implements OnInit {
       console.log(data);
       this.placesByStar = data;
     });
-
+    
+    var saveThis = this;
     $(".subway__line").on('click','.subway__station', function(){
       var station = $(this);
       var svg = station.closest('svg');
@@ -29,10 +37,13 @@ export class MapComponent implements OnInit {
       if(isSelected)
         elements.attr('class','subway__station');
       else{
-        alert(station.attr('id'));
+        var stationName = station.attr('id');
+        saveThis.placeListByStation(stationName);
         elements.attr('class','subway__station is-selected');
       }
 
     });
   }
+
+  
 }
