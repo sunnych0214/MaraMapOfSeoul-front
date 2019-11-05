@@ -39,6 +39,7 @@ export class MapComponent implements OnInit {
       else{
         var stationName = station.attr('id');
         saveThis.placeListByStation(stationName);
+        $(".subway__line .subway__station").attr('class','subway__station');
         elements.attr('class','subway__station is-selected');
       }
 
