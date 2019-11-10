@@ -32,8 +32,8 @@ export class InsertPlaceComponent implements OnInit {
       name: [""],
       lat: [50.00],
       lng: [60.00],
-      open_time: [''],
-      close_time: [''],
+      openTime: [''],
+      closeTime: [''],
       tel: [''],
       menu: [''],
       detail: ['']
