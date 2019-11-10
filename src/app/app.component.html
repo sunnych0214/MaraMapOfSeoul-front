@@ -9,11 +9,13 @@
 <section class="best_place">
   <div class="best_place_wrap">
     <span class="title">BEST</span>
-    <ul class="list_wrap">
-      <li class="list" *ngFor="let place of placesByStar">
+    <div class="list_wrap">
+      <ng-container *ngFor="let place of placesByStar; let i = index">
+        <div class="list" *ngIf="i<5">
         <span [routerLink]="['/placeDetail',place.id]">{{place.name}}</span>
-      </li>
-    </ul>
+        </div>
+      </ng-container>
+    </div>
   </div>
 </section>
 <section class="test">
