@@ -8,16 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PlaceDetailComponent implements OnInit {
 
-  private place;
+  private uuid;
 
   constructor(private route: ActivatedRoute) { 
-    //this.place = route.snapshot.params['place'];
+    this.uuid = this.route.snapshot.params['place'];
   }
 
   ngOnInit() {
-      this.route.paramMap.subscribe(params => {
-      console.log('here');
-      });   
+    console.log(this.uuid);
   }
 
 
