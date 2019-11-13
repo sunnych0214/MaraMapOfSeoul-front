@@ -32,19 +32,32 @@ export class InsertPlaceComponent implements OnInit {
       name: [""],
       lat: [50.00],
       lng: [60.00],
-      open_time: [''],
-      close_time: [''],
+      openTime: [''],
+      closeTime: [''],
       tel: [''],
       menu: [''],
-      detail: ['']
+      detail: [''],
+      thumbnail:[''],
+      thumbnailFile:[null]
     });
   }
 
-  
+  uploadFile(event) {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.insertPlaceForm.get('thumbnailFile').setValue(file);
+    }
+  }
+
 
   onSubmit(insertPlaceForm : any){
-    console.log(insertPlaceForm);
-    let result = this.apiservice.registerPlace(insertPlaceForm);
+
+      this.apiservice.uploadFile(insertPlaceForm.thumbnailFile).subscribe((data)=>{
+        console.log(data._body);
+        this.insertPlaceForm.get('thumbnail').setValue(data._body);
+      });
+
+      let result = this.apiservice.registerPlace(insertPlaceForm);
   }
 
   

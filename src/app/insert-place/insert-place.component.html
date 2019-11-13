@@ -1,5 +1,5 @@
 <h2>장소 입력하기</h2>
-<form insertPlaceForm="ngform" id="insertPlaceForm"  name="insertPlaceForm"
+<form insertPlaceForm="ngform" id="insertPlaceForm"  name="insertPlaceForm" enctype="multipart/form-data"
     [formGroup]="insertPlaceForm" (ngSubmit)="onSubmit(insertPlaceForm.value)">
 
     <label for="placeName">이름 : 
@@ -8,15 +8,16 @@
         <!-- <input type="button" (click)="findPostCodePopUp()"/> -->
     </label><br>
     <label>영업시간 : 
-        <input type="time" formControlName="open_time" #open_time>
-         - <input type="time" formControlName="close_time" #close_time></label><br>
+        <input type="time" formControlName="openTime" #open_time>
+         - <input type="time" formControlName="closeTime" #close_time></label><br>
     <label>전화번호 : 
         <input type="tel" formControlName="tel" #tel></label><br>
-    <label>메뉴 사진 : 
-        <input type="file" formControlName="menu" #menu></label><br>
+     <label>썸네일 : 
+        <input type="file" (change)="uploadFile($event)"  #file></label><br>
+    
     <label>특징 : 
         <textarea formControlName="detail" #detail></textarea></label><br>
 
-
+    <input type="hidden" id="thumbnail" name="thumbnail" formControlName="thumbnail" #thumbnail>
     <input type="submit" value="전송">
 </form>

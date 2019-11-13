@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import {Headers, Http, RequestMethod, Response} from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient : HttpClient,
+    private http: Http) { }
 
   /* PLACE */
   public placeListAll(){
@@ -38,7 +40,6 @@ export class ApiService {
   }
   
   public placeListByStation(station: string){
-    console.log("?");
     return this.httpClient.post(`/api/place/placeListByStation`,station);
   }
 
@@ -70,6 +71,16 @@ export class ApiService {
     return this.httpClient.post(`/api/review/starMaraByPlacestar`,"");
   }
 
+
+  public uploadFile(thumbnailFile: any){
+    const headers = new Headers({'enctype': 'multipart/form-data'});
+    let data = new FormData();
+    let result;
+    data.append('file', thumbnailFile);
+    return this.http.post(`/api/fileUpload`,data , { headers })
+   console.log(result);
+   return result;
+  }
 }
 
 
