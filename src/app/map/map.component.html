@@ -1,7 +1,3 @@
-<p>map works!</p>
-<!-- <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map> -->
 
   <svg class="subway" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="80 0 925 450">
 
@@ -236,7 +232,7 @@
       <span class="title">역 주변 맛집</span>
       <ul class="list_wrap">
         <li class="list" *ngFor="let place of placesByStar">
-          <span>{{place.name}}</span>
+          <span [routerLink]="['/placeDetail',place.id]" routerLinkActive="router-link-active" >{{place.name}}</span>
         </li>
       </ul>
     </div>

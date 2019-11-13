@@ -3,18 +3,18 @@
 
 <div class="sortButton">
 <!-- 검색 옵션 -->
-<input type="button" id="orderByStar" value="별점순" (click)="orderByStar()">
+<input type="button" id="orderByStar" value="별점순" (click)="orderByStar()">{{star}}
 <!-- <input type="hidden" id="starStatus" value="" -->
 
-<input type="button" id="orderByReview" value="리뷰개수순" (click)="orderByReview()">
+<input type="button" id="orderByReview" value="리뷰개수순" (click)="orderByReview()">{{review}}
 
-<input type="button" id="orderByView" value="조회순" (click)="orderByView()">
+<input type="button" id="orderByView" value="조회순" (click)="orderByView(1)">{{view}}
 </div>
 
 <div class="placeList">
     <ul class="placeList_wrap">
       <li class="placeElement" *ngFor="let place of places | filter:searchText">
-        <span>{{place.name}}</span>
+        <span [routerLink]="['/placeDetail',place.id]" routerLinkActive="router-link-active" >{{place.name}}</span>
       </li>
     </ul>
 </div>
