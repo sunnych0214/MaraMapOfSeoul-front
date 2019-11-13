@@ -38,12 +38,13 @@ export const ROUTES:Routes =
     PlaceviewComponent
   ],
   imports: [
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES,{onSameUrlNavigation: `reload`}),
     CommonModule,
     Ng2SearchPipeModule,
     FormsModule,
     AgmCoreModule
-  ]
+  ],
+  exports: [RouterModule]
 })
 
 export class ViewModule { }
